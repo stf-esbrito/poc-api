@@ -1,8 +1,6 @@
 package br.com.stefanini.poc.service;
 
-import java.io.ByteArrayInputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.ArrayList;
 
 import org.springframework.core.io.InputStreamResource;
@@ -11,15 +9,17 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import br.com.stefanini.poc.dto.ColaboradorDTO;
 import br.com.stefanini.poc.dto.FileDTO;
 
 @Service
 public class UploadService {
 
-	private final  ArrayList<FileDTO> ARQUIVOS = new ArrayList<>();
+	private final ArrayList<ColaboradorDTO> COLABORADORES = new ArrayList<>();
+	private final ArrayList<FileDTO> ARQUIVOS = new ArrayList<>();
 
-	public void salvar(FileDTO file) throws IOException {
-		ARQUIVOS.add(file);
+	public void salvar(ColaboradorDTO colaborador) throws IOException {
+		COLABORADORES.add(colaborador);
 	}
 
 	public HttpHeaders getHeaders(String fileName) {
