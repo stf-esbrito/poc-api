@@ -1,11 +1,9 @@
 package br.com.stefanini.poc.dto;
 
-import org.springframework.web.multipart.MultipartFile;
-
 public class ColaboradorDTO {
 	private Long id;
 	private String name;
-	private MultipartFile file;
+	private ArquivoDTO file;
 	
 	public Long getId() {
 		return id;
@@ -19,10 +17,10 @@ public class ColaboradorDTO {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public MultipartFile getFile() {
+	public ArquivoDTO getFile() {
 		return file;
 	}
-	public void setFile(MultipartFile file) {
+	public void setFile(ArquivoDTO file) {
 		this.file = file;
 	}
 	

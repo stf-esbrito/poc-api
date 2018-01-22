@@ -3,16 +3,32 @@ package br.com.stefanini.poc.dto;
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 
-public class FileDTO {
+public class ArquivoDTO {
+	private Long id;
 	private byte[] file;
 	private String name;
+	private String type;
 	
-	public FileDTO() {
+	
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
+	public String getType() {
+		return type;
+	}
+	public void setType(String type) {
+		this.type = type;
+	}
+	public ArquivoDTO() {
 		
 	}
-	public FileDTO(byte[] file, String name) {
+	public ArquivoDTO(byte[] file, String name, String type) {
 		this.file = file;
 		this.name = name;
+		this.type = type;
 	}
 	
 	public byte[] getFile() {
